@@ -1,0 +1,294 @@
+/* 바로 아래의 @tailwind base라는 게 Navbar랑 
+ 스타일이 충돌하는 것 같아요. 일단 주석처리합니다. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.header_input_box {
+  /* position: relative;
+  border: none;
+  background-color: white;
+  height: 30px;
+  width: 400px;
+  border-radius: 20px;
+  padding-left: 15px; */
+}
+.header_input {
+  /* border: none;
+  background-color: white;
+  height: 30px;
+  width: 400px;
+  border-radius: 20px;
+  padding-left: 15px; */
+}
+.header_input_icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
+}
+.header_profile {
+  width: 50px;
+  height: 50px;
+  background-color: #bbab8c;
+  border-radius: 50%;
+}
+
+body {
+  background-color: #fdf7e4;
+  margin: 0;
+}
+/* 
+ img {
+  height : 600px;
+  width : 70%;
+
+ } */
+
+.mogul {
+  position: absolute;
+  top: 300px;
+  left: 150px;
+
+}
+
+.home_first {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.logo {
+  height: 50px;
+  width: 100px;
+}
+
+.flex-custom {
+  
+  background-color: #faeed1;
+  /* padding: 0 50px; */
+  /* font-weight: bold; */
+}
+.header_input_box {
+  position: relative;
+}
+.header_input {
+  border: none;
+  background-color: white;
+  height: 30px;
+  width: 400px;
+  border-radius: 20px;
+}
+.header_input_icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
+}
+.header_profile {
+  width: 50px;
+  height: 50px;
+  background-color: #bbab8c;
+  border-radius: 50%;
+}
+
+body {
+  background-color: #fdf7e4;
+  margin: 0;
+}
+/* 
+ img {
+  height : 600px;
+  width : 70%;
+
+ } */
+
+.mogul {
+  position: absolute;
+  top: 300px;
+  left: 150px;
+  /* font-size :  20px;
+  font-weight: bold; */
+}
+
+.home_first {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  /* background-color: #EACDBF; */
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.logo {
+  height: 50px;
+  width: 100px;
+}
+
+.nav_txt {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav_txt > .active {
+  color: #bbab8c;
+}
+
+.space {
+  margin-bottom: 15px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#contain {
+  overflow: hidden;
+  display: -webkit-box;
+  display : -ms-flexbox;
+  display: flex;
+  background: #111;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height : 100vh;
+  
+}
+#drag-container, #spin-container {
+  position: relative;
+  display: -webkit-box;
+  display : -ms-flexbox;
+  display: flex;
+  margin : auto;
+  /* margin-right: 550px;
+  margin-top: 200px; */
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  animation: spin 40s linear infinite;
+  
+
+}
+#drag-container img,  #spin-container video {
+ 
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position : absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  line-height : 200px;
+  font-size: 50px;
+  text-align: center;
+  -webkit-box-shadow : 0 0 8px #fff;
+  box-shadow: 0 0 #fff;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, #0005);
+
+}
+
+#drag-container img:hover{
+  -webkit-box-shadow : 0 0 15px #fffd;
+  box-shadow : 0 0 15px #fffd;
+  -webkit-box-reflect: below 10px linear-gradient(trasparent, #0007);
+  cursor: pointer;
+}
+
+#spin-container img {
+    /* 회전을 위해 필요한 스타일을 여기에 추가합니다. */
+    transition: transform 1s ease-in-out; /* 회전 애니메이션 적용 */
+}
+
+
+#ground {
+  width : 900px;
+  height:900px;
+  position : absolute;
+  top : 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+  transform: translate(-50%,-50%) rotateX(90deg);
+  background: -webkit-radial-gradient(center center,farthest-side,#9993,transparent);
+
+}
+
+/* 
+ @-webkit-keyframes spin {
+  from{
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  } to {
+    -webkit-transform: rotateY(360deg);
+    transform : rotateY(360deg);
+  }
+} */
+
+/* @keyframes spin {
+  from{
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  } to {
+    -webkit-transform: rotateY(360deg);
+    transform : rotateY(360deg);
+  }
+}  */
+#spin-container {
+  transition: transform 0.5s ease;
+}
+@-webkit-keyframes spinRevert {
+  from{
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  } to {
+    -webkit-transform: rotateY(0deg);
+    transform : rotateY(0deg);
+  }
+}
+
+@keyframes spinRevert {
+  from{
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  } to {
+    -webkit-transform: rotateY(0deg);
+    transform : rotateY(0deg);
+  }
+}
+
+
+
+
+
+
+
+
+#chat-room {
+  overflow-y: scroll;
+}
+
+
+  #chat-container::-webkit-scrollbar {
+    display: none; 
+  }
